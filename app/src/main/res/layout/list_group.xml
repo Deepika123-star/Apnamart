@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:paddingTop="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp" />
+    <ImageView
+        android:id="@+id/ivGroupIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/group_indicator"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

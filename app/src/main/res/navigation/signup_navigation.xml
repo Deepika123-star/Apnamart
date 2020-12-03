@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_navigation"
+    app:startDestination="@id/numberfragment">
+
+    <fragment
+        android:id="@+id/numberfragment"
+        android:name="com.smartwebarts.apnamart.signup.fragments.number.NumberFragment"
+        android:label="number_fragment"
+        tools:layout="@layout/number_fragment">
+
+        <action
+            android:id="@+id/action_numberfragment_to_OTPFragment"
+            app:destination="@id/OTPFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.smartwebarts.apnamart.signup.fragments.otp.OtpFragment"
+        android:label="otp_fragment"
+        tools:layout="@layout/otp_fragment" >
+        <action
+            android:id="@+id/action_OTPFragment_to_signupFragment"
+            app:destination="@id/signupFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.smartwebarts.apnamart.signup.fragments.signup.SignupFragment"
+        android:label="SignupFragment" />
+</navigation>

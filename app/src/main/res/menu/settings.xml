@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_gallery"
+        android:title="My Orders"
+        android:icon="@drawable/ic_myorders"/>
+
+    <item
+        android:id="@+id/my_basket"
+        android:title="My Basket"
+        android:visible="false"
+        android:icon="@drawable/ic_shopping_cart"/>
+
+    <item
+        android:id="@+id/my_wishlist"
+        android:title="My Wishlist"
+        android:icon="@drawable/ic_heart_black"/>
+
+
+    <item
+        android:id="@+id/my_account"
+        android:title="My Account"
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
+
+    <item
+        android:id="@+id/my_wallet"
+        android:title="My Wallet"
+        android:icon="@drawable/ic_baseline_account_balance_wallet_24"/>
+
+
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_baseline_power_settings_new_24"/>
+
+</menu>

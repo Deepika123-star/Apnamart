@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <color name="colorPrimary">#035C91</color>-->
+    <!--    <color name="colorPrimaryDark">#035C91</color>-->
+    <!--    <color name="colorAccent">#035C91</color>-->
+
+    <color name="colorPrimary">#247AB3</color>
+    <color name="colorPrimaryDark">#186395</color>
+    <color name="colorAccent">#57BAE8</color>
+    #247AB3
+    <color name="splash_background">#035C91</color>
+
+    <color name="green">#57BAE8</color>
+    <color name="orange">#FE8100</color>
+    <color name="hintColor">#808080</color>
+    <color name="lightGrey">#dcdcdc</color>
+    <color name="darkGrey">#2F2929</color>
+
+    <color name="bg_green">#00BCD4</color>
+
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="item_name">#0c0c0c</color>
+    <color name="description">#1a1a1a</color>
+    <color name="chef">#777</color>
+    <color name="timestamp">#777</color>
+    <color name="magenta">#FF00FF</color>
+</resources>

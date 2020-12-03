@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "319447702882",
+    "firebase_url": "https://apnamart-bfb6d.firebaseio.com",
+    "project_id": "apnamart-bfb6d",
+    "storage_bucket": "apnamart-bfb6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319447702882:android:f6e51a081d7f802ad4603b",
+        "android_client_info": {
+          "package_name": "com.apnamart.online"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319447702882-c7537nmji0vfn6bnces6o4095lp6ki48.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apnamart.online",
+            "certificate_hash": "deabadeca4c5ed881877265d410781be50457746"
+          }
+        },
+        {
+          "client_id": "319447702882-1dk82anj6llunglq421catn3bhmj8qtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEmwr5oyg8p3iMcnBCCLqTkLWyrugSgLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319447702882-1dk82anj6llunglq421catn3bhmj8qtf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

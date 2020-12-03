@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterSocial">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/MyCardView"
+            android:layout_marginBottom="50dp"
+            app:cardElevation="@dimen/_20sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/textView2"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Enter Your 10 digit Mobile Number"
+                    android:textColor="@color/green"
+                    android:layout_margin="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_to"
+                    android:layout_below="@id/textView"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Your Mobile number To Get Started"
+                    android:layout_below="@id/textView3"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/_5sdp"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/textView4"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Full Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fullName"
+                        android:layout_width="match_parent"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/tvFullName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:textStyle="bold"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvmobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/tvEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Mobile number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mobile"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="true"
+                    android:onClick="socialRegister"
+                    android:layout_margin="10dp"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_arrow_right" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

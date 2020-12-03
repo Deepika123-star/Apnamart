@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Shop by Categories"
+            android:icon="@drawable/ic_categories"/>
+
+        <item
+            android:id="@+id/vendors"
+            android:title="Vendors"
+            android:visible="false"
+            android:icon="@drawable/ic_vendor"/>
+
+        <item
+            android:id="@+id/live_chat"
+            android:title="Live Chat"
+            android:icon="@drawable/ic_chat"/>
+
+        <item
+            android:id="@+id/about_us"
+            android:title="About Us"
+            android:icon="@drawable/ic_about_us"/>
+
+        <item
+            android:id="@+id/terms"
+            android:title="@string/terms_conditions"
+            android:visible="false"
+            android:icon="@drawable/ic_tc"/>
+
+        <item
+            android:id="@+id/privacy_policy"
+            android:title="Privacy Policy"
+            android:visible="false"
+            android:icon="@drawable/pp" />
+
+        <item
+            android:id="@+id/refund_policy"
+            android:title="Refund Policy"
+            android:visible="false"
+            android:icon="@drawable/ic_rp"/>
+
+        <item
+            android:id="@+id/share_app"
+            android:title="Share App"
+            android:icon="@drawable/ic_share"/>
+
+        <item
+            android:id="@+id/contact_us"
+            android:title="Contact Us"
+            android:icon="@drawable/ic_baseline_contact_mail_24"/>
+
+        <item
+            android:id="@+id/faq"
+            android:title="FAQs"
+            android:icon="@drawable/ic_faq"/>
+
+        <!--<item
+            android:id="@+id/nav_slideshow"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_tools"
+            android:title="@string/menu_tools" />-->
+    </group>
+
+
+</menu>

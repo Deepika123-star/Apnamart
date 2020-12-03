@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_20sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".signup.fragments.number.NumberFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/MyCardView"
+        android:layout_marginBottom="50dp"
+        app:cardElevation="@dimen/_20sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verify"
+                android:layout_toStartOf="@id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/_5sdp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Enter OTP"
+                android:textColor="@color/green"
+                android:layout_margin="@dimen/_5sdp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_to"
+                android:layout_below="@id/textView"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/opensans_bold"
+                android:textSize="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let's get started with register your number"
+                android:layout_below="@id/textView3"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/_5sdp"/>
+
+            <com.goodiebag.pinview.Pinview
+                android:id="@+id/otp_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:inputType="number"
+                android:layout_below="@+id/textView4"
+                android:textColor="@android:color/darker_gray"
+                app:pinBackground="@drawable/background_pinview_bottom_line"
+                app:pinHeight="36dp"
+                app:pinLength="4"
+                app:pinWidth="36dp"
+                app:splitWidth="36dp"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/otp_view"
+                android:gravity="center"
+                android:padding="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OTP not recieved ?"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGrey"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/resendotp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:text="Resend OTP"
+                    android:textStyle="bold"
+                    android:textColor="@color/main_blue_stroke_color"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/_5sdp"-->
+<!--                android:layout_marginEnd="@dimen/_5sdp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_below="@id/textView4"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:hint="Mobile number">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/mobile"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:inputType="number"-->
+<!--                    android:maxLength="10"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:layout_height="wrap_content"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:layout_margin="10dp"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</FrameLayout>

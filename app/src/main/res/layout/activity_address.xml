@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="3"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".address.AddressActivity">
+
+    <include
+        layout="@layout/toolbar_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/next">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/llll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <!--<fragment android:id="@+id/autocomplete_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                    />-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Add a Landmark"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.seatgeek.placesautocomplete.PlacesAutocompleteTextView
+                        android:id="@+id/places_autocomplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:inputType="textPostalAddress"
+                        android:padding="14dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:pacv_googleMapsApiKey="@string/location_api_key_id" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_HOuseNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtHouse"
+                        android:inputType="textPostalAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="House No., Building Name"
+                        android:textColorHint="@color/orange"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_semibold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="10dp">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Society, Area, Colony"
+                        android:textColorHint="@color/orange"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:inputType="textPostalAddress"
+                        android:fontFamily="@font/opensans_semibold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_CIty"
+                    android:layout_width="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:hint="City"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtCity"
+                        android:inputType="textPostalAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/orange"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_semibold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_landmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="10dp">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtLandmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Landmark"
+                        android:textColorHint="@color/orange"
+                        android:textColor="@android:color/black"
+                        android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_semibold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_pinCode"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pincode"
+                        android:maxLength="6"
+                        android:textColorHint="@color/orange"
+                        android:textColor="@android:color/black"
+                        android:inputType="number"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_semibold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:onClick="next"
+        android:layout_alignParentBottom="true"
+        android:text="CONTINUE"/>
+
+</RelativeLayout>
