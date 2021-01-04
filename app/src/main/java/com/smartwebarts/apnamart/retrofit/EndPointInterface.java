@@ -190,7 +190,7 @@ public interface EndPointInterface {
     @FormUrlEncoded
     Call<List<TimeModel>> getTimeSlot(@Field("pincode") String pincode);
 
-    @GET("API/api_deliverycharges")
+    @GET("API/api_deliverycharges/")
     Call<List<DeliveryChargesModel>> getDeliveryCharges();
 
     @GET("API/api_productimages/{id}")

@@ -35,6 +35,20 @@
             android:textStyle="bold"
             android:textColor="@android:color/white" />
 
+
+        <ImageView
+            android:id="@+id/showWhatsApp"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_toEndOf="@+id/tv_name"
+            app:srcCompat="@drawable/ic_whatsapp"
+             />
+
+
         <LinearLayout
             android:id="@+id/amountView"
             android:layout_width="wrap_content"
@@ -93,12 +107,17 @@
                 android:layout_marginEnd="@dimen/_8sdp">
 
 
+
+
+
+
                 <FrameLayout
                     android:layout_width="@dimen/_32sdp"
                     android:layout_height="@dimen/_32sdp"
                     android:visibility="visible"
                     android:onClick="showCart"
                     android:layout_centerInParent="true">
+
 
                     <ImageView
                         android:layout_width="@dimen/_25sdp"

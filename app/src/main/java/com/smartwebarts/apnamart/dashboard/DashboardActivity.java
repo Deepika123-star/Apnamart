@@ -57,6 +57,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -101,12 +102,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     private DrawerLayout drawer;
     private NavigationView navigationView;
     private GoogleApiClient googleApiClient;
+    ImageView showWhatsApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
+        showWhatsApp=findViewById(R.id.showWhatsApp);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);
         Toolbar_Set.INSTANCE.setBottomNav(this);
@@ -116,7 +118,21 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         setNavigationDrawer();
-
+showWhatsApp.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        try {
+//                    String url = "https://chat.whatsapp.com/";
+//                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+            String url = "https://api.whatsapp.com/send?phone="+"+917037481805";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+        } catch (Exception e) {
+            Toast.makeText(DashboardActivity.this, "Unable to open your whatsapp", Toast.LENGTH_SHORT).show();
+        }
+    }
+});
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
         // Passing each menu ID as a set of Ids because each
@@ -729,6 +745,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     public void showCart(View view) {
         startActivity(new Intent(this, CartActivity.class));
     }
+
+
 
     public void refresh(View view) {
         getCartList();

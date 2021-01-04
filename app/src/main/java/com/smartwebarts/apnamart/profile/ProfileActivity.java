@@ -264,10 +264,8 @@ public class ProfileActivity extends AppCompatActivity {
                 } else {
                     UtilMethods.INSTANCE.internetNotAvailableMessage(ProfileActivity.this);
                 }
-
                 dialog.dismiss();
             }
-
             private boolean validate() {
 
                 if (txtArea.getText().toString().isEmpty()){

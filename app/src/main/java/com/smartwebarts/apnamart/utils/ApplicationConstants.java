@@ -29,4 +29,7 @@ public enum ApplicationConstants {
     public String MyPREFERENCES = "prefs";
     public String DELIVERY_PREFS = "delivery";
     public String DELIVERY_CHARGES = "charges";
+
+    public String SUCCESS_URL = SITE_URL + "sucess/";
+    public String FAILED_URL = SITE_URL + "failed/";
 }

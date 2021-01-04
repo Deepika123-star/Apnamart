@@ -25,7 +25,6 @@ public class RegisterSocial extends AppCompatActivity {
     public static final String EMAIL = "email";
     public static final String IMAGE = "image";
     public String name, email, image;
-
     TextInputEditText txtName, txtEmail, txtMobile;
 
     @Override

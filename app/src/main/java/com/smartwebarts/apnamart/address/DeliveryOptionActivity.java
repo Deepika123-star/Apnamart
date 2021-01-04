@@ -33,6 +33,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+import com.smartwebarts.apnamart.PayUMoneyActivity;
 import com.smartwebarts.apnamart.R;
 import com.smartwebarts.apnamart.dashboard.DashboardActivity;
 import com.smartwebarts.apnamart.database.DatabaseClient;
@@ -73,8 +74,6 @@ public class DeliveryOptionActivity extends AppCompatActivity  implements Paymen
     private List<TimeModel> timinglist;
 
     private List<RadioButton> radioButtons = new ArrayList<>();
-
-
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     SimpleDateFormat sdf2 = new SimpleDateFormat("HHmmss");
     SimpleDateFormat sdf3 = new SimpleDateFormat("HH:mm:ss");
@@ -85,7 +84,6 @@ public class DeliveryOptionActivity extends AppCompatActivity  implements Paymen
         setContentView(R.layout.activity_delivery_option);
 
         initialise();
-
         getTimeSlot();
     }
 
@@ -169,7 +167,6 @@ public class DeliveryOptionActivity extends AppCompatActivity  implements Paymen
 
     private void enableDisable() {
         try{
-
             Date today = new Date();
             String strToday = sdf.format(today);
             Log.e("TIMINGS", strToday+ " , "+date);
@@ -254,57 +251,71 @@ public class DeliveryOptionActivity extends AppCompatActivity  implements Paymen
         /**
          * Instantiate Checkout
          */
-        Checkout checkout = new Checkout();
-        checkout.setKeyID(""+getString(R.string.razor_api_key));
+//        Checkout checkout = new Checkout();
+//        checkout.setKeyID(""+getString(R.string.razor_api_key));
+//
+//
+//        /**
+//         * Set your logo here
+//         */
+//        checkout.setImage(R.drawable.logo);
+//
+//        /**
+//         * Reference to current activity
+//         */
+//        final Activity activity = this;
+//
+//        /**
+//         * Pass your payment options to the Razorpay Checkout as a JSONObject
+//         */
+//        try {
+//            JSONObject options = new JSONObject();
+//
+//            /**
+//             * Merchant Name
+//             * eg: ACME Corp || HasGeek etc.
+//             */
+//            options.put("name", getString(R.string.app_name));
+//
+//            /**
+//             * Description can be anything
+//             * eg: Reference No. #123123 - This order number is passed by you for your internal reference. This is not the `razorpay_order_id`.
+//             *     Invoice Payment
+//             *     etc.
+//             */
+//            options.put("description", "Online Payment for "+ getString(R.string.app_name));
+//            options.put("image", getDrawable(R.drawable.logo));
+////            options.put("order_id", ""+model.getOrderid());
+//            options.put("currency", "INR");
+//
+//            /**
+//             * Amount is always passed in currency subunits
+//             * Eg: "500" = INR 5.00
+//             */
+//
+//            int dAmount = Integer.parseInt("0"+amount);
+//            dAmount*=100;
+//
+//            options.put("amount", ""+dAmount);
+//
+//            checkout.open(this, options);
+//        } catch(Exception e) {
+//            Log.e(TAG, "Error in starting Razorpay Checkout", e);
+//        }
 
 
-        /**
-         * Set your logo here
-         */
-        checkout.setImage(R.drawable.logo);
+        AppSharedPreferences preferences = new AppSharedPreferences(getApplication());
+        Intent intent = new Intent(DeliveryOptionActivity.this, PayUMoneyActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("name", preferences.getLoginUserName());
+        bundle.putString("email", preferences.getLoginEmail());
+        bundle.putString("productInfo", "Payment for "+ getString(R.string.app_name));
+        bundle.putString("phone", preferences.getLoginMobile());
+        bundle.putString("amount", amount);
+     //bundle.putString("amount", "1");
 
-        /**
-         * Reference to current activity
-         */
-        final Activity activity = this;
-
-        /**
-         * Pass your payment options to the Razorpay Checkout as a JSONObject
-         */
-        try {
-            JSONObject options = new JSONObject();
-
-            /**
-             * Merchant Name
-             * eg: ACME Corp || HasGeek etc.
-             */
-            options.put("name", getString(R.string.app_name));
-
-            /**
-             * Description can be anything
-             * eg: Reference No. #123123 - This order number is passed by you for your internal reference. This is not the `razorpay_order_id`.
-             *     Invoice Payment
-             *     etc.
-             */
-            options.put("description", "Online Payment for "+ getString(R.string.app_name));
-            options.put("image", getDrawable(R.drawable.logo));
-//            options.put("order_id", ""+model.getOrderid());
-            options.put("currency", "INR");
-
-            /**
-             * Amount is always passed in currency subunits
-             * Eg: "500" = INR 5.00
-             */
-
-            int dAmount = Integer.parseInt("0"+amount);
-            dAmount*=100;
-
-            options.put("amount", ""+dAmount);
-
-            checkout.open(this, options);
-        } catch(Exception e) {
-            Log.e(TAG, "Error in starting Razorpay Checkout", e);
-        }
+        intent.putExtras(bundle);
+        startActivityForResult(intent, 1234);
     }
 
     @Override

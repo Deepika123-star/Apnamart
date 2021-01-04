@@ -30,7 +30,6 @@
         <activity
             android:name=".address.DeliveryOptionActivity"
             android:screenOrientation="portrait" />
-
         <uses-library android:name="com.google.android.maps" />
 
         <meta-data
@@ -129,6 +128,7 @@
             android:screenOrientation="portrait" />
         <activity android:name=".productlist.ProductListActivity3" />
         <activity android:name=".changepassword.ChangePasswordFragment" />
+        <activity android:name=".PayUMoneyActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

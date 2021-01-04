@@ -26,6 +26,7 @@
     <item
         android:id="@+id/my_wallet"
         android:title="My Wallet"
+        android:visible="false"
         android:icon="@drawable/ic_baseline_account_balance_wallet_24"/>
 
 
